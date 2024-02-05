@@ -13,12 +13,9 @@ jobs:
         os: [macos-latest, window-latest, ubuntu-latest]
         node-version: [16, 18, 20]
     
-    node: Node.js ${{ matrix.node-version }} on ${{matrix.os}}
-
+    name: Node.js ${{ matrix.node-version }} on ${{matrix.os}}
     runs-on: ${{matrix.os}}
-
-    name: Test using jest
-
+    
     steps:
       - name: Checkout this repository
         uses: actions/checkout@v3
